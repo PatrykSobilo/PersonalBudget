@@ -16,6 +16,8 @@ class UsersFile
 public:
     UsersFile(string usersFileName) : USERS_FILE_NAME(usersFileName){};
     void addUserDataToFile(User newUserData);
+    vector <User> loadUsersDataFromFile();
+    void changePasswordInUsersFile(string newPassword, int loggedUserNumebrId);
 };
 
 #endif

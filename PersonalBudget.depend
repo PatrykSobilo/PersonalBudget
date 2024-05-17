@@ -1,12 +1,14 @@
 # depslib dependency file v1.0
-1715957180 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.cpp
+1715959442 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.cpp
+	"Budget.h"
 
 1715957155 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\date.cpp
 
 1715958268 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\main.cpp
 	<iostream>
 
-1715957114 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\suppmethods.cpp
+1715959492 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\suppmethods.cpp
+	"SuppMethods.h"
 
 1715956952 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactiondata.cpp
 
@@ -14,16 +16,16 @@
 
 1715956854 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionsfile.cpp
 
-1715957565 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\user.cpp
+1715958547 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\user.cpp
 	"User.h"
 
 1715957532 c:\users\psobilo\desktop\programowanie\c++\personalbudget\user.h
 	<iostream>
 
-1715958083 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\usersfile.cpp
+1715958576 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\usersfile.cpp
 	"UsersFile.h"
 
-1715958040 c:\users\psobilo\desktop\programowanie\c++\personalbudget\usersfile.h
+1715958524 c:\users\psobilo\desktop\programowanie\c++\personalbudget\usersfile.h
 	<iostream>
 	<string>
 	<vector>
@@ -35,4 +37,23 @@
 	<string.h>
 	<string>
 	<afx.h>
+
+1715959469 c:\users\psobilo\desktop\programowanie\c++\personalbudget\suppmethods.h
+	<iostream>
+	<sstream>
+
+1715958300 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\usermanager.cpp
+	"UserManager.h"
+
+1715959128 c:\users\psobilo\desktop\programowanie\c++\personalbudget\usermanager.h
+	<iostream>
+	<vector>
+	"User.h"
+	"UsersFile.h"
+	"SuppMethods.h"
+
+1715959380 c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.h
+	<iostream>
+	"UserManager.h"
+	"Markup.h"
 

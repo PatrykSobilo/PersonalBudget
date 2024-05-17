@@ -31,6 +31,7 @@ public:
     void userLogout();
     bool isUserLoggedIn();
     void changeLoggedUserPassword();
+    void wypiszWszystkichUzytkownikow();
 };
 
 

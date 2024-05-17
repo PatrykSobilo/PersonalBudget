@@ -48,10 +48,10 @@
 		<Unit filename="TransactionsFile.h" />
 		<Unit filename="User.cpp" />
 		<Unit filename="User.h" />
+		<Unit filename="UserManager.cpp" />
+		<Unit filename="UserManager.h" />
 		<Unit filename="UsersFile.cpp" />
 		<Unit filename="UsersFile.h" />
-		<Unit filename="UsersManager.cpp" />
-		<Unit filename="UsersManager.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
