@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1715957180 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.cpp
+
+1715957155 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\date.cpp
+
+1715958268 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\main.cpp
+	<iostream>
+
+1715957114 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\suppmethods.cpp
+
+1715956952 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactiondata.cpp
+
+1715956898 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionmanager.cpp
+
+1715956854 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionsfile.cpp
+
+1715957565 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\user.cpp
+	"User.h"
+
+1715957532 c:\users\psobilo\desktop\programowanie\c++\personalbudget\user.h
+	<iostream>
+
+1715958083 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\usersfile.cpp
+	"UsersFile.h"
+
+1715958040 c:\users\psobilo\desktop\programowanie\c++\personalbudget\usersfile.h
+	<iostream>
+	<string>
+	<vector>
+	"Markup.h"
+	"User.h"
+
+4293264394 c:\users\psobilo\desktop\programowanie\c++\personalbudget\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
