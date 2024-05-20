@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "UserManager.h"
+#include "TransactionManager.h"
 #include "Markup.h"
 
 using namespace std;
@@ -10,6 +11,7 @@ using namespace std;
 class Budget
 {
     UserManager userManager;
+    TransactionManager *transactionManager;
 
 public:
     Budget(string usersFileName) : userManager(usersFileName)
@@ -21,6 +23,8 @@ public:
     char selectOptionFromUserMenu();
     void userLogout();
     void changeLoggedUserPassword();
+
+    void addIncome();
 };
 
 #endif

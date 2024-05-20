@@ -4,7 +4,7 @@
 
 1715957155 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\date.cpp
 
-1716222408 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\main.cpp
+1716222734 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\main.cpp
 	<iostream>
 	"Budget.h"
 
@@ -53,9 +53,10 @@
 	"UsersFile.h"
 	"SuppMethods.h"
 
-1715960017 c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.h
+1716222921 c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.h
 	<iostream>
 	"UserManager.h"
+	"TransactionManager.h"
 	"Markup.h"
 
 1715960017 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\markup.cpp
@@ -65,4 +66,15 @@
 	<iconv.h>
 	<windows.h>
 	<mbstring.h>
+
+1716223098 c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionmanager.h
+	<iostream>
+	<vector>
+	"SuppMethods.h"
+	"TransactionsFile.h"
+	"TransactionData.h"
+
+1715956840 c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionsfile.h
+
+1715956937 c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactiondata.h
 
