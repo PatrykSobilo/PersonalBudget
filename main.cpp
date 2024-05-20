@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    Budget budget("users.xml");
+    Budget budget("users.xml", "Incomes.xml");
     char choice;
 
     while(true)

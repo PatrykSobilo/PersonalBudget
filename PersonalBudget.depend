@@ -1,21 +1,24 @@
 # depslib dependency file v1.0
-1716222490 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.cpp
+1716222862 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.cpp
 	"Budget.h"
 
-1715957155 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\date.cpp
+1716223654 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\date.cpp
+	"Date.h"
 
-1716222734 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\main.cpp
+1716224251 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\main.cpp
 	<iostream>
 	"Budget.h"
 
-1715960017 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\suppmethods.cpp
+1716223943 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\suppmethods.cpp
 	"SuppMethods.h"
 
-1715956952 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactiondata.cpp
+1716223312 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactiondata.cpp
+	"TransactionData.h"
 
-1715956898 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionmanager.cpp
+1716223283 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionmanager.cpp
 
-1715956854 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionsfile.cpp
+1716223882 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionsfile.cpp
+	"TransactionsFile.h"
 
 1715960017 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\user.cpp
 	"User.h"
@@ -39,7 +42,7 @@
 	<string>
 	<afx.h>
 
-1715960017 c:\users\psobilo\desktop\programowanie\c++\personalbudget\suppmethods.h
+1716223928 c:\users\psobilo\desktop\programowanie\c++\personalbudget\suppmethods.h
 	<iostream>
 	<sstream>
 
@@ -53,7 +56,7 @@
 	"UsersFile.h"
 	"SuppMethods.h"
 
-1716222921 c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.h
+1716224391 c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.h
 	<iostream>
 	"UserManager.h"
 	"TransactionManager.h"
@@ -74,7 +77,21 @@
 	"TransactionsFile.h"
 	"TransactionData.h"
 
-1715956840 c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionsfile.h
+1716223819 c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionsfile.h
+	<iostream>
+	<string>
+	"Markup.h"
+	"TransactionData.h"
+	"SuppMethods.h"
+	<vector>
 
-1715956937 c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactiondata.h
+1716223233 c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactiondata.h
+	<iostream>
+	"Date.h"
+
+1716224632 c:\users\psobilo\desktop\programowanie\c++\personalbudget\date.h
+	<iostream>
+	<ctime>
+	<string>
+	"SuppMethods.h"
 

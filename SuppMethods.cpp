@@ -26,3 +26,20 @@ char SuppMethods::readChar()
     }
     return character;
 }
+
+string SuppMethods::convIntToString(int number)
+{
+    ostringstream ss;
+    ss << number;
+    string str = ss.str();
+    return str;
+}
+
+int SuppMethods::convStringToInt(string numb)
+{
+    int numbInt;
+    istringstream iss(numb);
+    iss >> numbInt;
+
+    return numbInt;
+}
