@@ -43,3 +43,11 @@ int SuppMethods::convStringToInt(string numb)
 
     return numbInt;
 }
+
+float SuppMethods::readFloat()
+{
+    cin.sync();
+    float enterNumber = 0;
+    cin >> enterNumber;
+    return enterNumber;
+}

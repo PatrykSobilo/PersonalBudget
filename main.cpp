@@ -30,7 +30,7 @@ int main()
 
             switch (choice)
             {
-            //case '1': budget.addIncome(); break;
+            case '1': budget.addIncome(); break;
             //case '2': budget.addExpense(); break;
             //case '3': budget.currentMonthBalance(); break;
             //case '4': budget.lastMonthBalance(); break;

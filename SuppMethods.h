@@ -12,6 +12,7 @@ public:
     static char readChar();
     static string convIntToString(int number);
     static int convStringToInt(string word);
+    static float readFloat();
 };
 
 #endif

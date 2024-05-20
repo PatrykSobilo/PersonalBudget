@@ -57,6 +57,50 @@ string Date::convertDateFromIntToString(int year, int month, int day)
     return convertedData;
 }
 
+bool Date::isTheTransactionDateFormatCorrect(string &date)
+{
+    int enteredYear = 0;
+    int enteredMonth = 0;
+    int enteredDay = 0;
+
+    if(date.length() != 10) return false; //sprawdza czy wprowadzono 10 znakow
+    for(int i = 0; i < 10; i++)
+    {
+        if(!(isdigit(date[i]) || date[i] == '-')) return false; //sprawdza kolejne znaki czy to cyfra lub "-"
+        if((i == 4 || i == 7) && date[i] != '-') return false; // sprawdza czy myslniki sa na odpowiedniej pozycji
+    }
+    enteredYear = stoi(date.substr(0,4));
+    enteredMonth = stoi(date.substr(5,2));
+    enteredDay = stoi(date.substr(8,2));
+
+    if(enteredYear < 2000 || enteredYear > year) return false;
+    if(enteredMonth < 1 || enteredMonth > 12 || enteredMonth > month) return false;
+    //if(enteredDay < 1 || enteredDay > 31) return false;
+
+    //maksymalnie ostatni dzien biezacego miesiaca
+    if(month == 4 || month == 6 || month == 9 || month == 11)
+    {
+        if(enteredDay < 1 || enteredDay > 30) return false;
+    }
+    if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
+    {
+        if(enteredDay < 1 || enteredDay > 31) return false;
+    }
+    if(month == 2)
+    {
+        if(enteredYear % 4 != 0)
+        {
+            if(enteredDay < 1 || enteredDay > 28) return false;
+        }
+        else
+        {
+            if(enteredDay < 1 || enteredDay > 2) return false;
+        }
+    }
+
+    return true;
+}
+
 string Date::readSelectedTransactionDate()
 {
     string date;

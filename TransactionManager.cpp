@@ -89,7 +89,7 @@ float TransactionManager::lastMonthIncome()
     return lastMonthIncome;
 }
 
-float TransactionManager::selectedPeriodIncomes(string beginDate, string endDate)
+/*float TransactionManager::selectedPeriodIncomes(string beginDate, string endDate)
 {
     int selectedPeriodIncomes = 0;
     int incomesNumber = incomes.size();
@@ -110,4 +110,4 @@ float TransactionManager::selectedPeriodIncomes(string beginDate, string endDate
     }
     cout << "Selected period incomes: " << selectedPeriodIncomes << endl;
     return selectedPeriodIncomes;
-}
+}*/
