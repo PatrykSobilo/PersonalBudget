@@ -2,6 +2,7 @@
 #define SUPPMETHODS_H
 #include <iostream>
 #include <sstream>
+#include <limits>
 
 using namespace std;
 
@@ -11,8 +12,9 @@ public:
     static string readLine();
     static char readChar();
     static string convIntToString(int number);
-    static int convStringToInt(string word);
     static float readFloat();
+    static int readInt();
+    static int convStringToInt(string word);
 };
 
 #endif

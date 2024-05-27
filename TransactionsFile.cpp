@@ -46,6 +46,52 @@ vector <TransactionData> TransactionsFile::loadIncomesFromFile(int loggedUserIdN
     }
 }
 
+vector <TransactionData> TransactionsFile::loadExpensesFromFile(int  loggedUserIdNumber)
+{
+    CMarkup expensesFile;
+    TransactionData expens;
+    vector <TransactionData> expenses;
+    int userIdNumberFromFile = 0;
+
+    bool fileExist = expensesFile.Load(EXPENSES_FILE_NAME);
+
+    if(fileExist)
+    {
+        expensesFile.FindElem("Expenses");
+        expensesFile.IntoElem();
+
+        while(expensesFile.FindElem("Expense"))
+        {
+            expensesFile.IntoElem();
+            expensesFile.FindElem("UserId");
+            userIdNumberFromFile = SuppMethods::convStringToInt(expensesFile.GetData());
+            if(loggedUserIdNumber == userIdNumberFromFile)
+            {
+                expensesFile.ResetMainPos();
+                expensesFile.FindElem("ExpenseId");
+                expens.setTransactionNumberId(stoi(expensesFile.GetData()));
+
+                expensesFile.FindElem("UserId");
+                expens.setUserId(stoi(expensesFile.GetData()));
+
+                expensesFile.FindElem("Date");
+                expens.setDate(expensesFile.GetData());
+
+                expensesFile.FindElem("Item");
+                expens.setItem(expensesFile.GetData());
+
+                expensesFile.FindElem("Amount");
+                expens.setAmount(stof(expensesFile.GetData()));
+
+                expenses.push_back(expens);
+                expensesFile.OutOfElem();
+            }
+            else expensesFile.OutOfElem();
+        }
+        return expenses;
+    }
+}
+
 void TransactionsFile::addIncomeDataToFile(TransactionData newTransactionData)
 {
     CMarkup incomeFile;
@@ -69,6 +115,28 @@ void TransactionsFile::addIncomeDataToFile(TransactionData newTransactionData)
 
 }
 
+void TransactionsFile::addExpenseDataToFile(TransactionData newTransactionData)
+{
+    CMarkup incomeFile;
+    if (!incomeFile.Load(EXPENSES_FILE_NAME))
+    {
+        incomeFile.AddElem("Expenses");
+    }
+    else
+    {
+        incomeFile.FindElem("Expenses");
+    }
+    incomeFile.IntoElem();
+    incomeFile.AddElem("Expense");
+    incomeFile.IntoElem();
+    incomeFile.AddElem("ExpenseId", newTransactionData.getTransactionNumberId());
+    incomeFile.AddElem("UserId", newTransactionData.getUserId());
+    incomeFile.AddElem("Date", newTransactionData.getDate());
+    incomeFile.AddElem("Item", newTransactionData.getItem());
+    incomeFile.AddElem("Amount", newTransactionData.getAmount());
+    incomeFile.Save(EXPENSES_FILE_NAME);
+}
+
 int TransactionsFile::getLastIncomeIdNumberFromFile()
 {
     CMarkup file;
@@ -89,4 +157,26 @@ int TransactionsFile::getLastIncomeIdNumberFromFile()
         file.OutOfElem();
     }
     return lastIncomeNumberId;
+}
+
+int TransactionsFile::getLastExpenseIdNumberFromFile()
+{
+    CMarkup file;
+
+    file.Load(EXPENSES_FILE_NAME);
+    if(file.FindElem("Expenses"))
+    {
+        file.IntoElem();
+        while(file.FindElem("Expense"))
+        {
+            file.IntoElem();
+            while(file.FindElem("ExpenseId"))
+            {
+                lastExpenseNumberId = SuppMethods::convStringToInt(file.GetData());
+            }
+            file.OutOfElem();
+        }
+        file.OutOfElem();
+    }
+    return lastExpenseNumberId;
 }

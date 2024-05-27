@@ -39,6 +39,8 @@ public:
     string todayDate;
 
     string readSelectedTransactionDate();
+    int combinedDate(string date);
+    bool isTheBalanceDateFormatCorrect(string &date);
 
 };
 #endif
