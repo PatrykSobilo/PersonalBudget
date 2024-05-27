@@ -64,3 +64,10 @@ void Budget::changeLoggedUserPassword()
 {
     userManager.changeLoggedUserPassword();
 }
+
+//------------Transactions------------
+
+void Budget::addIncome()
+{
+    transactionManager -> addIncome();
+}
