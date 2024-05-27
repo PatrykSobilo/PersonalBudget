@@ -37,6 +37,7 @@ char Budget::selectOptionFromUserMenu()
     cout << "---------------------------" << endl;
     cout << "6. Change password" << endl;
     cout << "7. Logout" << endl;
+    cout << "8. Logout and exit" << endl;
     cout << "---------------------------" << endl;
     cout << "Your choice: ";
     choice = SuppMethods::readChar();
@@ -86,7 +87,7 @@ void Budget::lastMonthBalance()
     transactionManager -> lastMonthBalance();
 }
 
-/*void Budget::selectedPeriodBalance()
+void Budget::selectedPeriodBalance()
 {
     transactionManager -> selectedPeriodBalance();
-}*/
+}

@@ -211,3 +211,98 @@ void TransactionManager::lastMonthBalance()
     system("pause");
 
 }
+
+float TransactionManager::selectedPeriodIncomes(string beginDate, string endDate)
+{
+    int selectedPeriodIncomes = 0;
+    int incomesNumber = incomes.size();
+    int beginD = date.combinedDate(beginDate);
+    int endD = date.combinedDate(endDate);
+    int fileD = 0;
+    string fileDate = "";
+
+    for(int i = 0; i < incomesNumber; i++)
+    {
+        fileDate = incomes[i].getDate();
+        fileD = date.combinedDate(fileDate);
+        if(fileD >= beginD && fileD <= endD)
+        {
+            selectedPeriodIncomes += incomes[i].getAmount();
+            showTransactionData(incomes[i]);
+        }
+    }
+    cout << "Selected period incomes: " << selectedPeriodIncomes << endl;
+    return selectedPeriodIncomes;
+}
+
+float TransactionManager::selectedPeriodExpenses(string beginDate,string endDate)
+{
+    int selectedPeriodExpenses = 0;
+    int expensesNumber = expenses.size();
+    int beginD = date.combinedDate(beginDate);
+    int endD = date.combinedDate(endDate);
+    int fileD = 0;
+    string fileDate = "";
+
+    for(int i = 0; i < expensesNumber; i++)
+    {
+        fileDate = expenses[i].getDate();
+        fileD = date.combinedDate(fileDate);
+        if(fileD >= beginD && fileD <= endD)
+        {
+            selectedPeriodExpenses -= expenses[i].getAmount();
+            showTransactionData(expenses[i]);
+        }
+    }
+    cout << "Selected period expenses: " << selectedPeriodExpenses << endl;
+    return selectedPeriodExpenses;
+}
+
+void TransactionManager::selectedPeriodBalance()
+{
+    //Date date;
+    string beginDate = "";
+    string endDate = "";
+
+    system("cls");
+    cout << "---SELECTED PERIOD BALANCE---" << endl;
+    do
+    {
+        cout << "Enter date in YYYY-MM-DD format" << endl;
+        cout << "From: ";
+        beginDate = SuppMethods::readLine();
+    }
+    while(!date.isTheBalanceDateFormatCorrect(beginDate));
+    do
+    {
+        cout << "Enter date in YYYY-MM-DD format" << endl;
+        cout << "From " << beginDate  << endl << "to: ";
+        endDate = SuppMethods::readLine();
+    }
+    while(!date.isTheBalanceDateFormatCorrect(endDate));
+    system("cls");
+
+
+    showSelectedPeriodBlance(beginDate, endDate);
+
+    system("pause");
+}
+
+void TransactionManager::showSelectedPeriodBlance(string beginDate, string endDate)
+{
+    cout << "---BALANCE FROM " << beginDate << " TO " << endDate << "---" << endl;
+
+    float totalInomes = selectedPeriodIncomes(beginDate, endDate);
+    float totalExpenses = selectedPeriodExpenses(beginDate, endDate);
+    float selectedPeriodBalance = totalInomes + totalExpenses;
+
+    cout << "---------------------------" << endl;
+    cout << "Selected period balance: " << selectedPeriodBalance << endl;
+    cout << "---------------------------" << endl;
+    cout << "---Selected period incomes---" << endl;
+    cout << "---------------------------" << endl;
+    selectedPeriodIncomes(beginDate, endDate);
+    cout << "---Selected period expenses---" << endl;
+    cout << "---------------------------" << endl;
+    selectedPeriodExpenses(beginDate, endDate);
+}
