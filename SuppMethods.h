@@ -3,6 +3,7 @@
 #include <iostream>
 #include <sstream>
 #include <limits>
+#include<algorithm>
 
 using namespace std;
 

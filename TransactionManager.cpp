@@ -231,7 +231,9 @@ float TransactionManager::selectedPeriodIncomes(string beginDate, string endDate
             showTransactionData(incomes[i]);
         }
     }
+    cout << "---------------------------" << endl;
     cout << "Selected period incomes: " << selectedPeriodIncomes << endl;
+    cout << "---------------------------" << endl;
     return selectedPeriodIncomes;
 }
 
@@ -254,7 +256,9 @@ float TransactionManager::selectedPeriodExpenses(string beginDate,string endDate
             showTransactionData(expenses[i]);
         }
     }
+    cout << "---------------------------" << endl;
     cout << "Selected period expenses: " << selectedPeriodExpenses << endl;
+    cout << "---------------------------" << endl;
     return selectedPeriodExpenses;
 }
 
@@ -265,7 +269,7 @@ void TransactionManager::selectedPeriodBalance()
     string endDate = "";
 
     system("cls");
-    cout << "---SELECTED PERIOD BALANCE---" << endl;
+
     do
     {
         cout << "Enter date in YYYY-MM-DD format" << endl;
@@ -282,7 +286,6 @@ void TransactionManager::selectedPeriodBalance()
     while(!date.isTheBalanceDateFormatCorrect(endDate));
     system("cls");
 
-
     showSelectedPeriodBlance(beginDate, endDate);
 
     system("pause");
@@ -290,14 +293,21 @@ void TransactionManager::selectedPeriodBalance()
 
 void TransactionManager::showSelectedPeriodBlance(string beginDate, string endDate)
 {
-    cout << "---BALANCE FROM " << beginDate << " TO " << endDate << "---" << endl;
+
 
     float totalInomes = selectedPeriodIncomes(beginDate, endDate);
     float totalExpenses = selectedPeriodExpenses(beginDate, endDate);
+
+    system("cls");
+
+    cout << "---SELECTED PERIOD BALANCE---" << endl;
+    cout << "---BALANCE FROM " << beginDate << " TO " << endDate << "---" << endl;
+    cout << "---------------------------" << endl;
+
     float selectedPeriodBalance = totalInomes + totalExpenses;
 
     cout << "---------------------------" << endl;
-    cout << "Selected period balance: " << selectedPeriodBalance << endl;
+    cout << "SELECTED PERIOD BALANCE: " << selectedPeriodBalance << endl;
     cout << "---------------------------" << endl;
     cout << "---Selected period incomes---" << endl;
     cout << "---------------------------" << endl;

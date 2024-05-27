@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1716815778 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.cpp
+1716817376 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.cpp
 	"Budget.h"
 
 1716812657 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\date.cpp
 	"Date.h"
 
-1716815499 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\main.cpp
+1716817376 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\main.cpp
 	<iostream>
 	"Budget.h"
 
@@ -15,7 +15,7 @@
 1716812146 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactiondata.cpp
 	"TransactionData.h"
 
-1716817145 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionmanager.cpp
+1716817965 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionmanager.cpp
 	"TransactionManager.h"
 
 1716812657 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionsfile.cpp
@@ -43,10 +43,11 @@
 	<string>
 	<afx.h>
 
-1716812657 c:\users\psobilo\desktop\programowanie\c++\personalbudget\suppmethods.h
+1716819883 c:\users\psobilo\desktop\programowanie\c++\personalbudget\suppmethods.h
 	<iostream>
 	<sstream>
 	<limits>
+	<algorithm>
 
 1715960017 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\usermanager.cpp
 	"UserManager.h"
@@ -58,7 +59,7 @@
 	"UsersFile.h"
 	"SuppMethods.h"
 
-1716815499 c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.h
+1716817376 c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.h
 	<iostream>
 	"UserManager.h"
 	"TransactionManager.h"
@@ -72,7 +73,7 @@
 	<windows.h>
 	<mbstring.h>
 
-1716815603 c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionmanager.h
+1716817376 c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionmanager.h
 	<iostream>
 	<vector>
 	"SuppMethods.h"

@@ -12,7 +12,12 @@ float SuppMethods::readFloat()
 {
     cin.sync();
     float enterNumber = 0;
-    cin >> enterNumber;
+    string input;
+    cin >> input;
+
+    replace(input.begin(), input.end(), ',', '.');
+
+    enterNumber = stof(input);
     return enterNumber;
 }
 
