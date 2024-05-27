@@ -135,3 +135,79 @@ void TransactionManager::currentMonthBalance()
     cout << "---------------------------" << endl;
     system("pause");
 }
+
+float TransactionManager::lastMonthIncome()
+{
+    int numberOfIncomeTransactions = incomes.size();
+    Date date;
+    int lastMonth = date.getMonth() - 1;
+    int currentYear = date.getYear();
+    string dateFromFile = "";
+    int monthFromFile = 0;
+    int yearFromFile = 0;
+    float lastMonthIncome = 0;
+
+    for(int i = 0; i < numberOfIncomeTransactions; i++)
+    {
+        dateFromFile = incomes[i].getDate();
+
+        monthFromFile = SuppMethods::convStringToInt(dateFromFile.substr(5,2));
+        yearFromFile = SuppMethods::convStringToInt(dateFromFile.substr(0,4));
+        if(monthFromFile == lastMonth && yearFromFile == currentYear)
+        {
+            showTransactionData(incomes[i]);
+            lastMonthIncome += incomes[i].getAmount();
+        }
+    }
+    cout << endl <<"TOTAL INCOMES IN THE LAST MONTH: " << lastMonthIncome << endl;
+    return lastMonthIncome;
+}
+
+float TransactionManager::lastMonthExpense()
+{
+    int numberOfExpensTransactions = expenses.size();
+    Date date;
+    int lastMonth = date.getMonth() - 1;
+    int currentYear = date.getYear();
+    string dateFromFile = "";
+    int monthFromFile = 0;
+    int yearFromFile = 0;
+    float lastMonthExpense = 0;
+
+    for(int i = 0; i < numberOfExpensTransactions; i++)
+    {
+        dateFromFile = expenses[i].getDate();
+
+        monthFromFile = SuppMethods::convStringToInt(dateFromFile.substr(5,2));
+        yearFromFile = SuppMethods::convStringToInt(dateFromFile.substr(0,4));
+        if(monthFromFile == lastMonth && yearFromFile == currentYear)
+        {
+            showTransactionData(expenses[i]);
+            lastMonthExpense -= expenses[i].getAmount();
+        }
+    }
+    cout << endl <<"TOTAL EXPENSES IN THE LAST MONTH: " << lastMonthExpense << endl;
+    return lastMonthExpense;
+}
+
+void TransactionManager::lastMonthBalance()
+{
+    int totalIncome = lastMonthIncome();
+    int totalExpense = lastMonthExpense();
+    int balance = totalIncome + totalExpense;
+
+    system("cls");
+    cout << "Last month balance: " << balance << endl;
+    cout << "----------------------------" << endl << endl;
+
+    cout << "---Last month incomes---" << endl;
+    cout << "---------------------------" << endl;
+    lastMonthIncome();
+    cout << endl;
+    cout << "---Last month expenses---" << endl;
+    lastMonthExpense();
+    cout << endl;
+    cout << "---------------------------" << endl;
+    system("pause");
+
+}

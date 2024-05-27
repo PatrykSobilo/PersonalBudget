@@ -26,8 +26,8 @@ class TransactionManager
     void showTransactionData(TransactionData data);
     int currentMonthIncome();
     int currentMonthExpense();
-    //float lastMonthIncome();
-    //float lastMonthExpense();
+    float lastMonthIncome();
+    float lastMonthExpense();
 
     //float selectedPeriodIncomes(string beginDate,string endDate);
     //float selectedPeriodExpenses(string beginDate,string endDate);
@@ -42,7 +42,7 @@ public:
     void addIncome();
     void addExpense();
     void currentMonthBalance();
-    //void lastMonthBalance();
+    void lastMonthBalance();
     //void selectedPeriodBalance();
 };
 

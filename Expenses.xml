@@ -6,4 +6,11 @@
 <Item>test</Item>
 <Amount>100</Amount>
 </Expense>
+<Expense>
+<ExpenseId>2</ExpenseId>
+<UserId>1</UserId>
+<Date>2024-04-09</Date>
+<Item>test4</Item>
+<Amount>100</Amount>
+</Expense>
 </Expenses>
