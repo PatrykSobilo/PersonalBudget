@@ -81,12 +81,12 @@ void Budget::currentMonthBalance()
     transactionManager -> currentMonthBalance();
 }
 
-/*void Budget::lastMonthBalance()
+void Budget::lastMonthBalance()
 {
     transactionManager -> lastMonthBalance();
 }
 
-void Budget::selectedPeriodBalance()
+/*void Budget::selectedPeriodBalance()
 {
     transactionManager -> selectedPeriodBalance();
 }*/
