@@ -76,12 +76,12 @@ void Budget::addExpense()
     transactionManager -> addExpense();
 }
 
-/*void Budget::currentMonthBalance()
+void Budget::currentMonthBalance()
 {
     transactionManager -> currentMonthBalance();
 }
 
-void Budget::lastMonthBalance()
+/*void Budget::lastMonthBalance()
 {
     transactionManager -> lastMonthBalance();
 }

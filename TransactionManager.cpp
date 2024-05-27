@@ -60,3 +60,78 @@ void TransactionManager::showTransactionData(TransactionData data)
     cout << "Item:           " << data.getItem() << endl;
     cout << "Amount:         " << data.getAmount() << endl;
 }
+
+int TransactionManager::currentMonthIncome()
+{
+    int numberOfIncomeTransactions = incomes.size();
+    Date date;
+    int currentMonth = date.getMonth();
+    int currentYear = date.getYear();
+    string dateFromFile = "";
+    int monthFromFile = 0;
+    int yearFromFile = 0;
+    float currentMonthIncome = 0;
+
+    for(int i = 0; i < numberOfIncomeTransactions; i++)
+    {
+        dateFromFile = incomes[i].getDate();
+        monthFromFile = SuppMethods::convStringToInt(dateFromFile.substr(5,2));
+        yearFromFile = SuppMethods::convStringToInt(dateFromFile.substr(0,4));
+        if(monthFromFile == currentMonth && yearFromFile == currentYear)
+        {
+
+            showTransactionData(incomes[i]);
+            currentMonthIncome += incomes[i].getAmount();
+        }
+    }
+    cout << endl <<"TOTAL INCOMES IN THE CURRENT MONTH: " << currentMonthIncome << endl;
+    return currentMonthIncome;
+}
+
+int TransactionManager::currentMonthExpense()
+{
+    int numberOfExpenseTransactions = expenses.size();
+    Date date;
+    int currentMonth = date.getMonth();
+    int currentYear = date.getYear();
+    string dateFromFile = "";
+    int monthFromFile = 0;
+    int yearFromFile = 0;
+    float currentMonthExpense = 0;
+
+    for(int i = 0; i < numberOfExpenseTransactions; i++)
+    {
+        dateFromFile = expenses[i].getDate();
+
+        monthFromFile = SuppMethods::convStringToInt(dateFromFile.substr(5,2));
+        yearFromFile = SuppMethods::convStringToInt(dateFromFile.substr(0,4));
+        if(monthFromFile == currentMonth && yearFromFile == currentYear)
+        {
+            showTransactionData(expenses[i]);
+            currentMonthExpense -= expenses[i].getAmount();
+        }
+    }
+    cout << endl <<"TOTAL EXPENSES IN THE CURRENT MONTH: " << currentMonthExpense << endl;
+    return currentMonthExpense;
+}
+
+void TransactionManager::currentMonthBalance()
+{
+    int totalIncome = currentMonthIncome();
+    int totalExpense = currentMonthExpense();
+    int balance = totalIncome + totalExpense;
+
+    system("cls");
+    cout << "Current month balance: " << balance << endl;
+    cout << "----------------------------" << endl << endl;
+
+    cout << "---Current month incomes---" << endl;
+    cout << "---------------------------" << endl;
+    currentMonthIncome();
+    cout << endl;
+    cout << "---Current month expenses---" << endl;
+    currentMonthExpense();
+    cout << endl;
+    cout << "---------------------------" << endl;
+    system("pause");
+}

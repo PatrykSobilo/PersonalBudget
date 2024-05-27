@@ -24,8 +24,8 @@ class TransactionManager
     int getNewIncomeIdNumber();
     int getNewExpenseIdNumber();
     void showTransactionData(TransactionData data);
-    //int currentMonthIncome();
-    //int currentMonthExpense();
+    int currentMonthIncome();
+    int currentMonthExpense();
     //float lastMonthIncome();
     //float lastMonthExpense();
 
@@ -41,7 +41,7 @@ public:
     };
     void addIncome();
     void addExpense();
-    //void currentMonthBalance();
+    void currentMonthBalance();
     //void lastMonthBalance();
     //void selectedPeriodBalance();
 };

@@ -2,14 +2,14 @@
 1716810243 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\budget.cpp
 	"Budget.h"
 
-1716811799 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\date.cpp
+1716812657 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\date.cpp
 	"Date.h"
 
 1716811912 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\main.cpp
 	<iostream>
 	"Budget.h"
 
-1716811835 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\suppmethods.cpp
+1716812657 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\suppmethods.cpp
 	"SuppMethods.h"
 
 1716812146 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactiondata.cpp
@@ -18,7 +18,7 @@
 1716812349 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionmanager.cpp
 	"TransactionManager.h"
 
-1716812525 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionsfile.cpp
+1716812657 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionsfile.cpp
 	"TransactionsFile.h"
 
 1715960017 source:c:\users\psobilo\desktop\programowanie\c++\personalbudget\user.cpp
@@ -43,7 +43,7 @@
 	<string>
 	<afx.h>
 
-1716811821 c:\users\psobilo\desktop\programowanie\c++\personalbudget\suppmethods.h
+1716812657 c:\users\psobilo\desktop\programowanie\c++\personalbudget\suppmethods.h
 	<iostream>
 	<sstream>
 	<limits>
@@ -79,7 +79,7 @@
 	"TransactionsFile.h"
 	"TransactionData.h"
 
-1716811211 c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionsfile.h
+1716812657 c:\users\psobilo\desktop\programowanie\c++\personalbudget\transactionsfile.h
 	<iostream>
 	<string>
 	"Markup.h"
@@ -91,7 +91,7 @@
 	<iostream>
 	"Date.h"
 
-1716811786 c:\users\psobilo\desktop\programowanie\c++\personalbudget\date.h
+1716812657 c:\users\psobilo\desktop\programowanie\c++\personalbudget\date.h
 	<iostream>
 	<ctime>
 	<string>
