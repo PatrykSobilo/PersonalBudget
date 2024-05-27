@@ -34,10 +34,10 @@ int main()
             case '2': budget.addExpense(); break;
             case '3': budget.currentMonthBalance(); break;
             case '4': budget.lastMonthBalance(); break;
-            //case '5': budget.selectedPeriodBalance(); break;
-            //case '6': budget.changeLoggedUserPassword(); break;
+            case '5': budget.selectedPeriodBalance(); break;
+            case '6': budget.changeLoggedUserPassword(); break;
             case '7': budget.userLogout(); break;
-            case '8': budget.userLogout(); system ("pause"); exit(0); break;
+            case '8': budget.userLogout(); exit(0);
             }
         }
     }
