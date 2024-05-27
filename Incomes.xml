@@ -1,0 +1,9 @@
+<Incomes>
+<Income>
+<IncomeId>1</IncomeId>
+<UserId>1</UserId>
+<Date>2024-05-27</Date>
+<Item>test2</Item>
+<Amount>200</Amount>
+</Income>
+</Incomes>

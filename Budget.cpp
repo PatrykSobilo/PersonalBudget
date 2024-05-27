@@ -37,7 +37,6 @@ char Budget::selectOptionFromUserMenu()
     cout << "---------------------------" << endl;
     cout << "6. Change password" << endl;
     cout << "7. Logout" << endl;
-    cout << "8. Logout and exit" << endl;
     cout << "---------------------------" << endl;
     cout << "Your choice: ";
     choice = SuppMethods::readChar();
@@ -53,6 +52,7 @@ void Budget::newUserRegistration()
 int Budget::userLogin()
 {
     userManager.userLogin();
+    transactionManager = new TransactionManager(userManager.getLoggedUserNumberId(), INCOMES_FILE_NAME, EXPENSES_FILE_NAME);
 }
 
 void Budget::userLogout()
@@ -64,10 +64,29 @@ void Budget::changeLoggedUserPassword()
 {
     userManager.changeLoggedUserPassword();
 }
-
-//------------Transactions------------
+//--------------------TRANSACTIONS--------------------------//
 
 void Budget::addIncome()
 {
     transactionManager -> addIncome();
 }
+
+void Budget::addExpense()
+{
+    transactionManager -> addExpense();
+}
+
+/*void Budget::currentMonthBalance()
+{
+    transactionManager -> currentMonthBalance();
+}
+
+void Budget::lastMonthBalance()
+{
+    transactionManager -> lastMonthBalance();
+}
+
+void Budget::selectedPeriodBalance()
+{
+    transactionManager -> selectedPeriodBalance();
+}*/
